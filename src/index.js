@@ -1,7 +1,8 @@
 import './scss/index.scss';
 import './index.html';
 
-import Task from './js/task';
+import {Task} from './js/task';
+import {Tomato} from './js/tomato';
 
 let count = 0;
 const imp = ['default', 'important', 'so-so']
@@ -20,17 +21,10 @@ document.querySelector('.button-importance').addEventListener('click', ({target}
   }
 })
 
+// --test--
+const timer = new Tomato();
 
-// class test
+timer.addTask(new Task('wake up')).addTask(new Task('eat')).addTask(new Task('sleep')).showTasks();
 
-const taskOne = new Task('drink tea');
-
-console.log('id', taskOne.getId());
-console.log('title', taskOne.getTitle());
-console.log('count', taskOne.getCount());
-
-taskOne.increaseCount().increaseCount().setTitle().setTitle('drink water');
-
-console.log('id', taskOne.getId());
-console.log('title', taskOne.getTitle());
-console.log('count', taskOne.getCount());
+timer.activateTask(timer.showTasks()[0].getId());
+timer.runTimerTask();

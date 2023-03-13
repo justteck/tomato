@@ -1,4 +1,4 @@
-export default class Task {
+export class Task {
   #title;
   #count;
   #id;
@@ -10,7 +10,8 @@ export default class Task {
 
   // id
   setId() {
-    return Date.now().toString();
+    return this.#id =
+      Date.now().toString(36) + Math.random().toString(36);
   }
 
   getId() {
