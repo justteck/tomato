@@ -90,9 +90,6 @@ class ControllerTomato {
   handleSaveAfterBlurTask(titleElement, newTitle, taskId) {
     this.model.changeTitle(taskId, newTitle);
     titleElement.setAttribute('contenteditable', 'false');
-    console.log(this.model.getTasks()[0].getTitle());
-    console.log(this.model.getTasks()[1].getTitle());
-    console.log(this.model.getTasks()[2].getTitle());
   }
 }
 
