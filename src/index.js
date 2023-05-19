@@ -1,8 +1,16 @@
 import './scss/index.scss';
 import './index.html';
 
-import {Task} from './js/task';
-import {Tomato} from './js/tomato';
+import {
+  Tomato,
+  LowTask,
+  StandardTask,
+  HighTask
+} from './js/model';
+
+import {RenderTomato} from './js/view';
+import { elements } from './js/view/elements';
+import { ControllerTomato } from './js/controller';
 
 let count = 0;
 const imp = ['default', 'important', 'so-so']
@@ -22,9 +30,18 @@ document.querySelector('.button-importance').addEventListener('click', ({target}
 })
 
 // --test--
-const timer = new Tomato();
+const render = new RenderTomato(elements);
 
-timer.addTask(new Task('wake up')).addTask(new Task('eat')).addTask(new Task('sleep')).showTasks();
+// model.render = render;
+// console.log(model);
 
-timer.activateTask(timer.showTasks()[0].getId());
-timer.runTimerTask();
+// model.operation('add', new LowTask('wake up'));
+// model.operation('add', new StandardTask('eat'));
+// model.operation('add', new HighTask('sleep'));
+
+// model.activateTask(model.getTasks()[1].getId());
+// console.log('TEST', new StandardTask('eat').getTitle());
+
+// console.log('CUR ACTIVE', model.getActiveTaskTitle());
+
+// model.runmodelTask();

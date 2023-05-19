@@ -41,6 +41,7 @@
     "autoprefixer": "10.4.5"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.12.1"
+    "@babel/polyfill": "^7.12.1",
+    "redom": "^3.29.1"
   }
 }

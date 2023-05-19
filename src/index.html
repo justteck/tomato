@@ -28,10 +28,14 @@
             <p class="window__panel-task-text">Томат 2</p>
           </div>
           <div class="window__body">
-            <p class="window__timer-text">25:00</p>
-            <div class="window__buttons">
-              <button class="button button-primary">Старт</button>
-              <button class="button button-secondary">Стоп</button>
+            <div class="window__timer-text">
+              <div class="window__timer">
+                <span class="min"></span><span class="divider">:</span><span class="sec"></span>
+              </div>
+              <div class="window__buttons">
+                <button class="button button-primary">Старт</button>
+                <button class="button button-secondary">Стоп</button>
+              </div>
             </div>
           </div>
           <form class="task-form" action="submit">
@@ -68,13 +72,13 @@
             </li>
           </ul>
           <ul class="pomodoro-tasks__quest-tasks">
-            <li class="pomodoro-tasks__list-task important">
+            <!-- <li class="pomodoro-tasks__list-task important">
               <span class="count-number">1</span>
               <button class="pomodoro-tasks__task-text pomodoro-tasks__task-text_active">
                 Сверстать сайт
               </button>
               <button class="pomodoro-tasks__task-button"></button>
-              <!-- popup menu -->
+              
               <div class="burger-popup burger-popup_active">
                 <button class="popup-button burger-popup__edit-button">Редактировать</button>
                 <button class="popup-button burger-popup__delete-button">Удалить</button>
@@ -86,8 +90,6 @@
                 Оплатить налоги
               </button>
               <button class="pomodoro-tasks__task-button"></button>
-              <!-- popup menu -->
-
             </li>
             <li class="pomodoro-tasks__list-task default">
               <span class="count-number">3</span>
@@ -95,7 +97,7 @@
                 Проверить валидность
               </button>
               <button class="pomodoro-tasks__task-button"></button>
-            </li>
+            </li> -->
           </ul>
           <p class="pomodoro-tasks__deadline-timer">1 час 30 мин</p>
         </div>

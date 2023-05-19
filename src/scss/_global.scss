@@ -93,6 +93,10 @@ fieldset {
   &:hover {
     background-color: darker($window-back-ground, 1);
   }
+
+  &::placeholder {
+    color: var(--placeholder, rgb(133, 128, 128));
+  }
 }
 
 .button-importance {

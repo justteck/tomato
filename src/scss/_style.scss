@@ -50,9 +50,11 @@
   background-color: $window-back-ground;
   margin-bottom: 50px;
   padding: 70px 166px 108px;
+  text-align: center;
 }
 
 .window__timer-text {
+  min-width: 450px;
   color: $dark-font;
   font-size: 150px;
   line-height: 183px;
@@ -60,10 +62,36 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.window__timer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.window__timer .min,
+.window__timer .sec {
+  text-align: right;
+  display: block;
+  width: 200px;
+}
+
+.window__timer .sec {
+  text-align: left;
+}
+
+.window__timer .divider {
+  text-align: center;
+  display: block;
+  width: 50px;
+}
+
 .window__buttons {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 23px;
+  font-size: 20px;
+  line-height: 30px;
 }
 
 .task-form {
@@ -158,6 +186,10 @@
   }
 }
 
+.pomodoro-tasks__task-text span {
+  padding: 1px 3px 1px 3px;
+}
+
 .pomodoro-tasks__task-text_active {
   background-color: rgba(220, 13, 39, 0.15);
   transition: background-color 0.3s ease-in-out;
@@ -192,4 +224,13 @@
   font-size: 16px;
   line-height: 17px;
   color: $deadline-timer;
+}
+
+.task-edit {
+  background-color: rgba(175, 176, 168, 0.15);
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.25);
+
+    &:hover {
+      background-color: rgba(175, 176, 168, 0.15);
+    }
 }
